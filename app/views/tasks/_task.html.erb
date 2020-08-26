@@ -3,4 +3,5 @@
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
         <% end %>
+       <a href="<%= task_path(task.id) %>" class="btn" data-confirm="êtes-vous sur?" data-method="DELETE">Supprimer la tache</a>
       </li>
